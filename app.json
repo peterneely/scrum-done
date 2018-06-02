@@ -1,6 +1,6 @@
 {
   "name": "scrum-done",
-  "description": "An app for tracking work you've done (or not done), to be used in standups and retrospectives",
+  "description": "An app for tracking work you've done (or not done), to be used in scrums and retrospectives",
   "scripts": {
   },
   "env": {
