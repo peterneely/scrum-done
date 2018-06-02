@@ -1,16 +1,31 @@
 {
   "name": "done",
   "version": "1.0.0",
+  "description": "An app for tracking work you've done (or not done), to be used in standups and retrospectives",
+  "engines": {
+    "node": "8.9.x"
+  },
   "scripts": {
     "client": "cd client && yarn start",
-    "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "heroku-postbuild": "cd client/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
+    "server": "nodemon server",
+    "start": "node server"
   },
+  "cacheDirectories": [
+    "node_modules",
+    "client/node_modules"
+  ],
   "dependencies": {
-    "express": "^4.16.2",
-    "nodemon": "^1.17.5"
+    "express": "^4.16.2"
   },
   "devDependencies": {
-    "concurrently": "^3.5.0"
-  }
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.17.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peterneely/done.git"
+  },
+  "license": "MIT"
 }
