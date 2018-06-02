@@ -35,5 +35,9 @@ jobs:
         
       # run tests!
       - run: cd client && npm run test
+general:
+  branches:
+    ignore:
+     - master
 
 
