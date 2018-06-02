@@ -10,16 +10,14 @@
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "heroku-postbuild": "cd client/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
     "server": "nodemon server",
-    "start": "node server",
-    "test": "cd client && yarn test"
+    "start": "node server"
   },
   "cacheDirectories": [
     "node_modules",
     "client/node_modules"
   ],
   "dependencies": {
-    "express": "^4.16.2",
-    "react-scripts": "^1.1.4"
+    "express": "^4.16.2"
   },
   "devDependencies": {
     "concurrently": "^3.5.1",
