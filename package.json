@@ -10,7 +10,8 @@
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "heroku-postbuild": "cd client/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
     "server": "nodemon server",
-    "start": "node server"
+    "start": "node server",
+    "test": "cd client && yarn test"
   },
   "cacheDirectories": [
     "node_modules",
