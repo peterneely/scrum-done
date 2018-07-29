@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "An app for tracking work you've done (or not done), to be used in scrums and retrospectives",
   "engines": {
-    "node": "8.9.x"
+    "node": "8.9.4"
   },
   "scripts": {
     "client": "cd client && npm run start",
@@ -21,7 +21,12 @@
   },
   "devDependencies": {
     "concurrently": "^3.5.1",
-    "nodemon": "^1.17.5"
+    "eslint": "^5.2.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.10.0",
+    "nodemon": "^1.17.5",
+    "prettier": "^1.14.0"
   },
   "repository": {
     "type": "git",
