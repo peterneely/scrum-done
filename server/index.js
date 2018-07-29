@@ -15,9 +15,12 @@ if (cluster.isMaster) {
   }
 
   cluster.on('exit', (worker, code, signal) => {
-    console.error(`Node cluster worker ${worker.process.pid} exited: code ${code}, signal ${signal}`);
+    console.error(
+      `Node cluster worker ${
+        worker.process.pid
+      } exited: code ${code}, signal ${signal}`,
+    );
   });
-
 } else {
   const app = express();
 
@@ -35,6 +38,9 @@ if (cluster.isMaster) {
     res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
   });
 
-  app.listen(PORT, () => console.log(`Node cluster worker ${process.pid}: listening on port ${PORT}`));
+  app.listen(PORT, () =>
+    console.log(
+      `Node cluster worker ${process.pid}: listening on port ${PORT}`,
+    ),
+  );
 }
-

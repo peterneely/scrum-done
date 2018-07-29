@@ -40,7 +40,6 @@
     "react/jsx-key": "warn",
     "react/no-string-refs":"warn",
     "sort-keys": ["warn", "asc", {"caseSensitive": false, "natural": true}],
-    "alphabetical-destructuring": ["warn"],
     "prefer-const":"warn"
   },
   "extends": [

@@ -6,8 +6,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      fetching: true,
       message: null,
-      fetching: true
     };
   }
 
@@ -21,15 +21,16 @@ class App extends Component {
       })
       .then(json => {
         this.setState({
+          fetching: false,
           message: json.message,
-          fetching: false
-        });
-      }).catch(e => {
-        this.setState({
-          message: `API call failed: ${e}`,
-          fetching: false
         });
       })
+      .catch(e => {
+        this.setState({
+          fetching: false,
+          message: `API call failed: ${e}`,
+        });
+      });
   }
 
   render() {
@@ -43,7 +44,8 @@ class App extends Component {
           {'This is '}
           <a href="https://github.com/peterneely/scrum-done">
             {'create-react-app with a custom Node/Express server'}
-          </a><br />
+          </a>
+          <br />
         </p>
         <p className="App-intro">
           {this.state.fetching
